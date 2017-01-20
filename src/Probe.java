@@ -5,16 +5,19 @@ public class Probe{
 
   private String cards = "NESW";
 
-  void action(String diraction) {
+  String action(String diraction) {
 	int j = diraction.length();
 	char c;
+	String hist = "";
 	for(int i = 0; i < j; i++) {
 	  c = diraction.charAt(i);
-	  if(c == 'M')
+	  if(c == 'M'){
 		move();
-	  else
+		hist = hist + this.x + " " + this.y + " " + (int)this.dir + " ";
+	  } else
 		turn(c);
 	}
+	return hist;
   }
 
   public void move() {
@@ -49,7 +52,7 @@ public class Probe{
   }
   
   String response() {
-	String answer = this.x + " " + this.y + " " + this.dir;
+	String answer = this.x + " " + this.y + " " + (int)this.dir;
 	return answer;
   }
 }

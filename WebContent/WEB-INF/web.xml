@@ -6,10 +6,10 @@
     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
   <servlet>
     <servlet-name>ExploreMars</servlet-name>
-    <servlet-class>ExploreMarsWebPage</servlet-class>
+    <servlet-class>ExploreMarsWeb</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ExploreMars</servlet-name>
-    <url-pattern>/ExploreMarsWebPageServlet</url-pattern>
+    <url-pattern>/ExploreMarsWebServlet</url-pattern>
   </servlet-mapping>
 </web-app>
